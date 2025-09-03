@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Registros</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="bar">
+    <h1>📋 Registros</h1>
+    <nav><a href="{{ url_for('index') }}">Nueva predicción</a></nav>
+  </header>
+  <main class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>#</th><th>Paciente</th><th>DNI</th><th>Edad</th><th>Predicción</th><th>Prob.</th><th>Fecha</th><th>Imagen</th></tr>
+      </thead>
+      <tbody>
+        {% for r in items %}
+        <tr>
+          <td>{{ r.id }}</td><td>{{ r.patient_name }}</td>
+          <td>{{ r.document_id }}</td><td>{{ r.age }}</td>
+          <td>{{ r.pred_label }}</td><td>{{ '%.2f'|format(r.prob*100) }}%</td>
+          <td>{{ r.created_at.strftime('%Y-%m-%d %H:%M') }}</td>
+          <td><a href="{{ r.image_path }}" target="_blank">ver</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>

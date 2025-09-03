@@ -1,0 +1,15 @@
+# Python / venv
+.venv/
+__pycache__/
+*.pyc
+
+# Artefactos locales
+uploads/
+neumonia.db
+
+# Modelos pesados (usa LFS o releases)
+*.keras
+*.h5
+*.pkl
+*.pt
+*.onnx
