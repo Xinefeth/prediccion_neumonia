@@ -10,19 +10,20 @@ La aplicación incluye una **interfaz web con Flask**, que permite:
 
 ---
 
-## 📂 Contenido del repositorio  
+## 📂 Estructura del Proyecto  
 
-proyecto-neumonia/
-│── app.py # Aplicación principal en Flask
-│── best_effnetv2.keras # Modelo entrenado con TensorFlow/Keras
-│── requirements.txt # Dependencias del proyecto
-│── templates/ # Archivos HTML (frontend)
-│ ├── index.html # Interfaz principal (subida y predicción)
-│ └── records.html # Listado de registros con resultados
-│── static/ # Archivos estáticos (CSS, JS, Bootstrap)
-│── uploads/ # Carpeta para imágenes subidas
-│── neumonia.db # Base de datos SQLite (se genera automáticamente)
-└── README.md # Documentación del proyecto
+    proyecto-neumonia/  
+    ├── 📘 README.md              # Documentación principal  
+    ├── 🐍 app.py                 # Aplicación Flask principal  
+    ├── 🧠 best_effnetv2.keras    # Modelo entrenado con TensorFlow/Keras  
+    ├── 📄 requirements.txt       # Dependencias de Python  
+    ├── 🚫 .gitignore             # Archivos ignorados por Git  
+    ├── 📂 templates/             # Templates HTML  
+    │   ├── 🖥️ index.html         # Interfaz principal (subida y predicción)  
+    │   └── 📑 records.html       # Listado de registros con resultados  
+    ├── 🎨 static/                # Archivos estáticos (CSS, JS, Bootstrap)  
+    ├── 🗂️ uploads/               # Imágenes subidas por usuarios  
+    └── 🗄️ neumonia.db            # Base de datos SQLite (creada automáticamente)  
 
 ---
 
@@ -80,18 +81,17 @@ El modelo fue entrenado en **Google Colab** usando **EfficientNetV2B0** con las 
 
 2. Clonar el repositorio:  
    ```powershell
-  python -m venv .venv
+    python -m venv .venv
 
 3. Activar el entorno virtual:
    ```powershell
-  .\.venv\Scripts\Activate
+    .\.venv\Scripts\Activate
 
 4. Instalar dependencias:
    ```powershell
-  pip install --upgrade pip
-  pip install -r requirements.txt
-
+    pip install --upgrade pip
+    pip install -r requirements.txt
 
 5. Ejecutar la aplicación:  
    ```powershell
-  python app.py
+    python app.py
