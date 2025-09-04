@@ -11,9 +11,10 @@ La aplicación incluye una **interfaz web con Flask**, que permite:
 ---
 
 ## 📂 Contenido del repositorio  
+
 proyecto-neumonia/
-│── app.py # Aplicación Flask principal
-│── best_effnetv2.keras # Modelo entrenado de TensorFlow/Keras
+│── app.py # Aplicación principal en Flask
+│── best_effnetv2.keras # Modelo entrenado con TensorFlow/Keras
 │── requirements.txt # Dependencias del proyecto
 │── templates/ # Archivos HTML (frontend)
 │ ├── index.html # Interfaz principal (subida y predicción)
@@ -50,6 +51,10 @@ El modelo fue entrenado en **Google Colab** usando **EfficientNetV2B0** con las 
 - **Resultados:**  
   - Precisión superior al **97%** en imágenes de prueba.  
 
+📌 **Fuente del dataset:**  
+[Kaggle – Neumonía Dataset](https://www.kaggle.com/datasets/felipesalazarn/neumonia-dataset)  
+
+
 ---
 
 ## 🖥️ Funcionalidades  
@@ -68,6 +73,25 @@ El modelo fue entrenado en **Google Colab** usando **EfficientNetV2B0** con las 
 ## 🚀 Cómo ejecutar el proyecto  
 
 1. Clonar el repositorio:  
-   ```bash
+   ```powershell
    git clone https://github.com/usuario/proyecto-neumonia.git
-   cd proyecto-neumonia
+   cd  proyecto-neumonia
+   code .
+
+2. Clonar el repositorio:  
+   ```powershell
+  python -m venv .venv
+
+3. Activar el entorno virtual:
+   ```powershell
+  .\.venv\Scripts\Activate
+
+4. Instalar dependencias:
+   ```powershell
+  pip install --upgrade pip
+  pip install -r requirements.txt
+
+
+5. Ejecutar la aplicación:  
+   ```powershell
+  python app.py
